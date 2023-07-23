@@ -1,24 +1,39 @@
-import logo from './logo.svg';
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes
+} from "react-router-dom";
+import Home from './Components/Home';
+import Customer from './Components/Customer';
+import Invoice from './Components/Invoices';
+import Items from './Components/Items';
+import NavBar from './Components/Navbar';
+import NewCustomer from './Components/NewCustomer';
+import NewItem from './Components/NewItem';
+import NewInvoice from './Components/NewInvoice';
+import InvoicePreview from './Components/InvoicePreview';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <NavBar />
+      <div className="container">
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/customer' element={< Customer />} />
+          <Route path = '/customer/new' element = {<NewCustomer />} />
+          <Route path='/items' element={<Items />} />
+          <Route path = '/items/new' element = {<NewItem />} />
+          <Route path='/invoice' element={<Invoice />} />
+          <Route path='/invoice/new' element={<NewInvoice />} />
+          <Route path='invoice/preview/:id' element={<InvoicePreview/>} />
+        </Routes>
+      </div>
+    </Router>
+
+
   );
 }
 
