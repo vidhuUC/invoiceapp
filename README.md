@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# Invoice App - README
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
+The Invoice App is a web application that allows users to manage invoices, customers, and items. It enables users to create new customers, add new items, generate invoices by selecting customers and items, and preview the invoices before saving them. The app also provides the option to use dummy data for testing purposes, including 6 sample invoices, 4 customers, and 4 items.
 
-## Available Scripts
+## Use Cases
+The Invoice App facilitates the following use cases:
+1. Create a new customer: Users can add new customers to the app by providing their name, email, phone number, and address.
+2. Create new items: Users can add new items to the inventory by specifying their name, description, and price.
+3. Create invoices: Users can generate invoices by selecting a customer and adding items to the invoice. The app automatically calculates the total amount.
+4. Preview invoices: Users can view a preview of the generated invoices before saving them. The preview includes customer details, invoice date, due date, item details, total amount, and any additional notes.
+5. Use dummy data: The app provides an option to populate the database with dummy data for testing purposes. It includes 6 sample invoices, 4 customers, and 4 items.
 
-In the project directory, you can run:
+## Features
+- Create new customers with name, email, phone number, and address.
+- Add new items with name, description, and price to the inventory.
+- Generate invoices by selecting a customer and adding items.
+- Calculate the total amount automatically based on the selected items.
+- Preview invoices before saving them.
+- Use dummy data for testing with 6 sample invoices, 4 customers, and 4 items.
 
-### `npm start`
+## Getting Started
+To run the Invoice App on your local machine, follow these steps:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Clone the repository:
+```bash
+git clone <repository-url>
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. Install dependencies for both the backend and frontend:
+```bash
+cd invoice-app
+npm install
+cd client
+npm install
+```
 
-### `npm test`
+3. Run both the backend and frontend concurrently:
+```bash
+npm run both
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This command will start the backend server and the frontend application, and you can access the app in your web browser at `http://localhost:3000`.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Technologies Used
+The Invoice App is built using the following technologies:
+- Frontend: React, React Bootstrap
+- Backend: Node.js, Express.js, MongoDB
+- Other tools: Fetch, react-router-dom
