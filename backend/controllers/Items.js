@@ -20,8 +20,18 @@ const addItem = async (req, res) => {
     }
 };
 
+const deleteAllItems = async (req, res) => {
+    try {
+        const items = await Item.deleteMany();
+        res.status(200).json(items);
+    } catch (error) {
+        res.status(404).json({ message: error.message });
+    }
+}
+
 module.exports = {
     getAllItems,
     addItem,
+    deleteAllItems,
 };
 

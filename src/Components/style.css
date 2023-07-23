@@ -1,0 +1,43 @@
+.invoice-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .customer-info {
+    margin-bottom: 20px;
+  }
+  
+  .items-table {
+    margin-bottom: 20px;
+  }
+  
+  .items-table th {
+    text-align: center;
+  }
+  
+  .items-table td {
+    text-align: center;
+  }
+  
+  .total-section {
+    text-align: right;
+    margin-bottom: 20px;
+  }
+  
+  .notes-section {
+    margin-top: 20px;
+  }
+  
+  .notes-section p {
+    margin: 0;
+  }
+  

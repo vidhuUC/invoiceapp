@@ -2,6 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const cors = require('cors')
+const insertDummyData = require('./DummyData');
 
 const app = express()
 const port = 8000
@@ -15,10 +16,14 @@ app.use(bodyParser.urlencoded({ extended: true }));
 mongoose.connect('mongodb://localhost:27017/invoiceData', { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
     console.log('Connected to MongoDB');
+    insertDummyData();
   })
   .catch((error) => {
     console.error('Error connecting to MongoDB:', error);
   });
+
+
+
 
 app.use('/api', require('./routes/Customer'))
 app.use('/api', require('./routes/Items'))
