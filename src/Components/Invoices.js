@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState,useRef } from 'react';
 import { Button, Dropdown } from 'react-bootstrap';
 import Table from 'react-bootstrap/Table';
 import { Link } from 'react-router-dom';
@@ -9,6 +9,8 @@ const Invoices = () => {
     const [statusFilter, setStatusFilter] = useState('all');
     const [customers, setCustomers] = useState([]);
     const url = 'http://localhost:8000/api/invoices';
+
+    const lateInvoicesAlerted = useRef(false);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -54,12 +56,14 @@ const Invoices = () => {
                 return invoice.status !== 'paid' && dueDate < currentDate;
             });
 
-            if (lateInvoices.length > 0) {
-                // Alert if there are late invoices
+            if (lateInvoices.length > 0 && !lateInvoicesAlerted.current) {
+                // Alert if there are late invoices (only if not alerted before)
                 lateInvoices.forEach((invoice) => {
                     const customerName = customers.length > 0 ? customers.find((customer) => customer._id === invoice.customerId).name : '';
                     alert(`Invoice is late for ${customerName}`);
                 });
+                // Mark lateInvoicesAlerted as true to prevent future alerts
+                lateInvoicesAlerted.current = true;
             }
         };
         if (invoices.length > 0 && customers.length > 0)
