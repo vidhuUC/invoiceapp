@@ -29,9 +29,9 @@ git clone <repository-url>
 
 2. Install dependencies for both the backend and frontend:
 ```bash
-cd invoice-app
+cd invoiceapp
 npm install
-cd client
+cd backend
 npm install
 ```
 
