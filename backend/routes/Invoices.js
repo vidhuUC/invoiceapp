@@ -5,7 +5,6 @@ const Invoice = require('../controllers/Invoices');
 router.get('/invoices', Invoice.getAllInvoices);
 router.get('/invoices/:id', Invoice.getInvoiceById);
 router.post('/invoices', Invoice.addInvoice);
-router.delete('/invoices', Invoice.deleteAllInvoices);
 router.delete('/invoices/:id', Invoice.deleteInvoiceById);
 
 module.exports = router;

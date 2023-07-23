@@ -20,19 +20,9 @@ const addCustomer = async (req, res) => {
     }
 };
 
-const deleteAllCustomers = async (req, res) => {
-    try {
-        const customers = await Customer.deleteMany();
-        res.status(200).json(customers);
-    } catch (error) {
-        res.status(404).json({ message: error.message });
-    }
-}
-
 module.exports = {
     getAllCustomers,
     addCustomer,
-    deleteAllCustomers,
 };
 
 
