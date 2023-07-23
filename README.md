@@ -37,6 +37,7 @@ npm install
 
 3. Run both the backend and frontend concurrently:
 ```bash
+cd invoiceapp
 npm run both
 ```
 

@@ -29,7 +29,7 @@ const InvoicePreview = () => {
             setInvoice({ invoiceDate, dueDate, notes, total })
         }
         fetchInvoice();
-    }, []);
+    }, [id]);
 
     const { invoiceDate, dueDate, notes, total } = invoice
 
